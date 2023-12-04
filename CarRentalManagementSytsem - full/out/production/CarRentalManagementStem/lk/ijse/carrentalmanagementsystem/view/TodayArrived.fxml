@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="todayArrivedAnchorPane" prefHeight="1053.0" prefWidth="1824.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.TodayArrivedController">
+   <children>
+      <Text fill="#0d0d46" layoutX="43.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today Arrived">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="44.0" layoutY="260.0" prefHeight="654.0" prefWidth="1732.0" stylesheets="@../assets/CSS/Stylesheet.css">
+        <columns>
+          <TableColumn fx:id="vehNo" prefWidth="170.99996948242188" text="Vehicle No" />
+          <TableColumn fx:id="cusNo" minWidth="0.0" prefWidth="247.0" text="Customer No" />
+            <TableColumn fx:id="takenDate" minWidth="0.0" prefWidth="247.0" text="Taken Date" />
+            <TableColumn fx:id="tackenTime" minWidth="0.0" prefWidth="247.0" text="Time" />
+            <TableColumn fx:id="dueDate" minWidth="0.0" prefWidth="247.0" text="Due date" />
+            <TableColumn fx:id="dueTime" minWidth="0.0" prefWidth="247.0" text="Time" />
+        </columns>
+      </TableView>
+      <JFXButton contentDisplay="TOP" layoutX="1568.0" layoutY="940.0" onAction="#btnReturnOnAction" prefHeight="50.0" prefWidth="200.0" styleClass="button-general" stylesheets="@../assets/CSS/Stylesheet.css" text="Return" textAlignment="CENTER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Pane fx:id="totalArrivedPane" layoutX="42.0" layoutY="150.0" prefHeight="92.0" prefWidth="1725.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="1691.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon/search.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="serachAgreementId" labelFloat="true" layoutX="1302.0" layoutY="30.0" onAction="#serachAgreementIdOnAction" onKeyReleased="#filterNoDriver" prefHeight="31.0" prefWidth="387.0" promptText="Sreach" unFocusColor="#4059a9">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="1053.0" prefWidth="1639.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.ReportsFormController">
+   <children>
+      <Text layoutX="112.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <LineChart fx:id="lineCharts" layoutX="80.0" layoutY="163.0" prefHeight="400.0" prefWidth="1510.0" title="Anuual">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

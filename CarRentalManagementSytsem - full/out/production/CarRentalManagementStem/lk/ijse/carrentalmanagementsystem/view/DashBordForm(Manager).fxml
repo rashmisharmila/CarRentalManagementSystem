@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.lab.GNCalendarTile?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane fx:id="AnchorpanewithMenuBar" prefHeight="1068.0" prefWidth="1923.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.DashBordFormManagerController">
+   <children>
+      <AnchorPane fx:id="sidderslessAnchorPane" layoutX="122.0" layoutY="-4.0" prefHeight="1060.0" prefWidth="1792.0">
+         <children>
+            <ScrollPane layoutY="120.0" prefHeight="950.0" prefWidth="1798.0" style="-fx-background-color: white;" stylesheets="@../assets/CSS/Stylesheet.css">
+               <content>
+                  <AnchorPane fx:id="managerDashbordAnchorPane" prefHeight="1330.0" prefWidth="1820.0" style="-fx-background-color: white;">
+                     <children>
+                        <Pane layoutX="50.0" layoutY="424.0" prefHeight="398.0" prefWidth="1221.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Group layoutX="21.0" layoutY="155.0">
+                                 <children>
+                                    <Pane layoutX="6.0" layoutY="39.0" prefHeight="20.0" prefWidth="263.0">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="13.0" layoutY="-34.0" prefHeight="60.0" prefWidth="104.0">
+                                             <styleClass>
+                                                <String fx:value="scale" />
+                                                <String fx:value="success" />
+                                             </styleClass>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <children>
+                                                <JFXButton buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="GRAPHIC_ONLY" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #452B52;" styleClass="button6" stylesheets="@../assets/CSS/Stylesheet.css" text="Button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/icon/admin.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="13.0" layoutY="35.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #452B52;" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="-34.0" prefHeight="35.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h4" text="Registered" textFill="#8d8b8b">
+                                             <font>
+                                                <Font name="Roboto Black" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NoOfUsers" alignment="TOP_RIGHT" layoutX="159.0" layoutY="2.0" prefHeight="36.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h5">
+                                             <font>
+                                                <Font name="Roboto Black" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="17.0" layoutY="40.0" prefHeight="18.0" prefWidth="238.0" style="-fx-text-fill: -text-color;" styleClass="h5" text="Total number of users" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="Roboto" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow color="#0000001a" />
+                                       </effect>
+                                    </Pane>
+                                 </children>
+                              </Group>
+                              <Group layoutX="300.0" layoutY="156.0">
+                                 <children>
+                                    <Pane layoutX="6.0" layoutY="39.0" prefHeight="20.0" prefWidth="263.0">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="13.0" layoutY="-34.0" prefHeight="60.0" prefWidth="104.0">
+                                             <styleClass>
+                                                <String fx:value="scale" />
+                                                <String fx:value="success" />
+                                             </styleClass>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <children>
+                                                <JFXButton buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="GRAPHIC_ONLY" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #2573A1;" styleClass="button6" stylesheets="@../assets/CSS/Stylesheet.css" text="Button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/icon/driver.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="13.0" layoutY="35.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #2573A1;" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="-34.0" prefHeight="35.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h4" text="Registered" textFill="#8d8b8b">
+                                             <font>
+                                                <Font name="Roboto Black" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NoOfDrivers" alignment="TOP_RIGHT" layoutX="159.0" layoutY="2.0" prefHeight="36.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h5">
+                                             <font>
+                                                <Font name="Roboto Black" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="17.0" layoutY="40.0" prefHeight="18.0" prefWidth="238.0" style="-fx-text-fill: -text-color;" styleClass="h5" text="Total number of Drivers" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="Roboto" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow color="#0000001a" />
+                                       </effect>
+                                    </Pane>
+                                 </children>
+                              </Group>
+                              <Group layoutX="574.0" layoutY="156.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="12.0" layoutY="81.0" prefHeight="18.0" prefWidth="238.0" style="-fx-text-fill: -text-color;" styleClass="h5" text="Total number of Vehicles" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="Roboto" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="6.0" layoutY="39.0" prefHeight="20.0" prefWidth="263.0">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="13.0" layoutY="-34.0" prefHeight="60.0" prefWidth="104.0">
+                                             <styleClass>
+                                                <String fx:value="scale" />
+                                                <String fx:value="success" />
+                                             </styleClass>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <children>
+                                                <JFXButton buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="GRAPHIC_ONLY" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #B47D28;" styleClass="button6" stylesheets="@../assets/CSS/Stylesheet.css" text="Button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/icon/vehicle.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="13.0" layoutY="35.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #B47D28;" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="-34.0" prefHeight="35.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h4" text="Registered" textFill="#8d8b8b">
+                                             <font>
+                                                <Font name="Roboto Black" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NoOfVehicle" alignment="TOP_RIGHT" layoutX="159.0" layoutY="2.0" prefHeight="36.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h5">
+                                             <font>
+                                                <Font name="Roboto Black" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow color="#0000001a" />
+                                       </effect>
+                                    </Pane>
+                                 </children>
+                              </Group>
+                              <Group layoutX="846.0" layoutY="158.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="12.0" layoutY="81.0" prefHeight="18.0" prefWidth="238.0" style="-fx-text-fill: -text-color;" styleClass="h5" text="Total number of Customer" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="Roboto" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="6.0" layoutY="39.0" prefHeight="20.0" prefWidth="263.0">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="13.0" layoutY="-34.0" prefHeight="60.0" prefWidth="104.0">
+                                             <styleClass>
+                                                <String fx:value="scale" />
+                                                <String fx:value="success" />
+                                             </styleClass>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <children>
+                                                <JFXButton buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="GRAPHIC_ONLY" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #014d0f;" styleClass="button6" stylesheets="@../assets/CSS/Stylesheet.css" text="Button" textFill="WHITE">
+                                                   <graphic>
+                                                      <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/icon/vehicle.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="13.0" layoutY="35.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #014d0f;" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="-34.0" prefHeight="35.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h4" text="Registered" textFill="#8d8b8b">
+                                             <font>
+                                                <Font name="Roboto Black" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NoOfCustomer" alignment="TOP_RIGHT" layoutX="159.0" layoutY="2.0" prefHeight="36.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" styleClass="h5">
+                                             <font>
+                                                <Font name="Roboto Black" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow color="#0000001a" />
+                                       </effect>
+                                    </Pane>
+                                 </children>
+                              </Group>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="50.0" layoutY="840.0" prefHeight="398.0" prefWidth="1221.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AreaChart fx:id="MonthlyAchievemenetareaChart" alternativeColumnFillVisible="true" createSymbols="false" horizontalGridLinesVisible="false" layoutX="92.0" layoutY="16.0" prefHeight="280.0" prefWidth="968.0" styleClass="main-chart" title="Monthly Achievement ">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis minorTickCount="0" side="LEFT" />
+                                 </yAxis>
+                              </AreaChart>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="callAndWalkPane" layoutX="1289.0" layoutY="11.0" prefHeight="401.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <PieChart fx:id="pieChart" layoutX="13.0" layoutY="19.0" prefHeight="366.0" prefWidth="434.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1289.0" layoutY="840.0" prefHeight="401.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Text layoutX="151.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg.Rateing" wrappingWidth="107.45361328125">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <Group layoutX="90.0" layoutY="192.0">
+                                 <children>
+                                    <VBox prefHeight="20.0" prefWidth="188.0">
+                                       <children>
+                                          <Label minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #0a2342;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutY="20.0" prefHeight="23.0" prefWidth="152.0">
+                                       <children>
+                                          <Label minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #961414;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutY="40.0" prefHeight="18.0" prefWidth="131.0">
+                                       <children>
+                                          <Label minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #31420a;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutY="60.0" prefHeight="14.0" prefWidth="86.0">
+                                       <children>
+                                          <Label minHeight="0.0" prefHeight="5.0" prefWidth="70.0" style="-fx-background-color: #966f14;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutY="80.0" prefHeight="20.0" prefWidth="25.0">
+                                       <children>
+                                          <Label minHeight="4.0" prefHeight="4.0" prefWidth="15.0" style="-fx-background-color: #31420a;" />
+                                       </children>
+                                    </VBox>
+                                    <Text layoutX="28.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="77.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="139.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="156.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="278">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Group>
+                              <Text fill="#ababab" layoutX="66.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+5" wrappingWidth="18.80359873920679">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ababab" layoutX="66.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+4" wrappingWidth="18.80359873920679">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ababab" layoutX="66.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+3">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ababab" layoutX="66.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+2">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ababab" layoutX="66.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+1">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="286.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="492">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Text>
+                              <Rating fx:id="rating" layoutX="159.0" layoutY="90.0" prefHeight="33.0" prefWidth="176.0" rating="5.0" styleClass="root" updateOnHover="true">
+                                 <stylesheets>
+                                    <URL value="@../assets/CSS/master.css" />
+                                    <URL value="@../assets/CSS/light.css" />
+                                    <URL value="@../assets/CSS/skeleton.css" />
+                                 </stylesheets></Rating>
+                              <Label fx:id="lblRating" layoutX="93.0" layoutY="88.0" style="-fx-font-weight: bold; -fx-font-size: 30;" text="8,6" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1289.0" layoutY="423.0" prefHeight="401.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <GNCalendarTile layoutX="48.0" layoutY="25.0" prefHeight="353.0" prefWidth="371.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="dashbordPane" layoutX="50.0" layoutY="10.0" prefHeight="398.0" prefWidth="1221.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="385.0" fitWidth="1220.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/CSS/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="88.0" layoutY="41.0" prefHeight="70.0" prefWidth="200.0" text="Welcome ">
+                                 <font>
+                                    <Font name="Rockwell Bold Italic" size="40.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblusername" layoutX="266.0" layoutY="41.0" prefHeight="65.0" prefWidth="273.0" text=" ">
+                                 <font>
+                                    <Font name="Rockwell Bold Italic" size="40.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbldate" layoutX="179.0" layoutY="214.0" prefHeight="35.0" prefWidth="148.0" textFill="#979292" />
+                              <Label fx:id="lbltime" layoutX="179.0" layoutY="172.0" prefHeight="35.0" prefWidth="148.0" textFill="#979292" />
+                              <Label layoutX="94.0" layoutY="113.0" prefHeight="21.0" prefWidth="306.0" text="Our brands are the most valuable things and " textFill="#a4a1a1">
+                                 <font>
+                                    <Font name="System Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="134.0" text="Customer service is our way of life" textFill="#a4a1a1">
+                                 <font>
+                                    <Font name="System Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="133.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20ionic-ios-time.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="133.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20material-today.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Text fill="#0d0d46" layoutX="18.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashborad">
+               <font>
+                  <Font name="Segoe UI Bold" size="49.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="-4.0" prefHeight="1068.0" prefWidth="124.0" style="-fx-background-color: #ababab;">
+         <children>
+            <VBox layoutX="4.0" layoutY="158.0" prefHeight="437.0" prefWidth="124.0">
+               <children>
+                  <JFXButton contentDisplay="TOP" onAction="#btnDashboradOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="button3" stylesheets="@../assets/CSS/Stylesheet.css" text="DashBorad" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/bdashboa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" onAction="#btnvehicleOnAction" prefHeight="83.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="button3" stylesheets="@../assets/CSS/Stylesheet.css" text="Vehicle" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/bvehicle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" onAction="#btnUserOnAction" prefHeight="83.0" prefWidth="118.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="button3" stylesheets="@../assets/CSS/Stylesheet.css" text="User" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/badmin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" onAction="#btnDriversOnAction" prefHeight="83.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="button3" stylesheets="@../assets/CSS/Stylesheet.css" text="Driver" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/bdrivers.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" onAction="#btnReportsOnAction" prefHeight="83.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="button3" stylesheets="@../assets/CSS/Stylesheet.css" text="Reports" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/reporst.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="89.0" fitWidth="184.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/Logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton contentDisplay="TOP" layoutX="1.0" layoutY="968.0" onAction="#btnLogout" prefHeight="89.0" prefWidth="124.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Logout" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/Icon%20open-account-logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+  
+</AnchorPane>

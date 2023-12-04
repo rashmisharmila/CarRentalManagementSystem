@@ -1,0 +1,206 @@
+drop database if exists CarRentManagementSystem;
+CREATE DATABASE IF NOT EXISTS CarRentManagementSystem;
+
+USE CarRentManagementSystem;
+
+
+CREATE TABLE IF NOT EXISTS  Admin(
+	Admin_Id VARCHAR(15),
+	Name VARCHAR(45),
+	Address VARCHAR(50),
+	PhoneNumber VARCHAR(30),
+	Email VARCHAR(20),
+	RegisteredDate VARCHAR(30),
+	role VARCHAR(30),
+	username VARCHAR(30),
+	password VARCHAR(30),
+	CONSTRAINT PRIMARY KEY (Admin_Id)
+);
+Insert into Admin values("Admin001","Rashmi Sharmila","No 194/A Galle Rd, Panadura","077-1234568","rashi12@gmail.com","2022-01-01","Admin","rashi","RAsh!@12");
+CREATE TABLE IF NOT EXISTS Customer(
+	Cid VARCHAR(16) NOT NULL,
+	Cname VARCHAR(30),
+	Caddress VARCHAR(30),
+	phonenumber varchar(45),
+	CNIC VARCHAR(30),
+	Email VARCHAR(20),
+	CLicenceNo VARCHAR(35),
+	RegisteredDate VARCHAR(30),
+	CONSTRAINT PRIMARY KEY (Cid)
+	  
+);
+create table IF NOT EXISTS CountOfVehicle(
+			vehicleTypeCode varchar(45),
+            vehicleCount int,
+			CONSTRAINT PRIMARY KEY (vehicleTypeCode)
+            );
+  Insert into CountOfVehicle values("CAR_01",4);          
+create table IF NOT EXISTS Vehicle(
+	vehicleNo VARCHAR(45) NOT NULL,
+	vehicle_name VARCHAR(30),
+	model varchar(45),
+	Colour Varchar(20),
+	Vehicle_Licenceid VARCHAR(10),
+	Vehicle_insurancesCompany VARCHAR(40),	
+	Vehicle_Insuranceid VARCHAR(20),
+	year varchar(20),
+	fuelType VARCHAR(20),
+	literOfFeul DECIMAL(10,3),
+	transmissin varchar(20),
+	RegDate varchar(45),
+	
+	CONSTRAINT PRIMARY KEY (vehicleNo)
+);
+Insert into Vehicle values("Audi_A1_CAY_8600","Audi","Audi_A1","black","B123123","Abc Company","123-1231-2312","2015","Petrol",40.00,"Automatic","2018-03-02" );
+Insert into Vehicle values("Honda_V_CAY_1234","Hinda","Vezel","white","B123456","XYZ Company","321-1231-1245","2016","Petrol",40.00,"Tiptronic","2018-06-05");
+Insert into Vehicle values("Toyota_P_CAY_3467","Toyota","Passo","black","B345345","QWE Company","567-5674-2312","2016","Petrol",40.00,"Automatic","2019-04-02");
+Insert into Vehicle values("Nissan_S_CAY_9876","Nissan","Sunny","white","B347812","RTY Company","144-1000-2312","2015","Petrol",40.00,"Automatic","2019-07-07");
+
+Create table if not exists ratesTable(
+	no int(5),
+	rateId varchar(5),
+    rateType varchar(20),
+	vehicleNo VARCHAR(45) NOT NULL,
+    rate decimal(10,2) ,
+    mileage decimal(10,3),
+    vehicleTypeCode varchar(45),
+    CONSTRAINT PRIMARY KEY (no),
+CONSTRAINT FOREIGN KEY(vehicleNo) REFERENCES Vehicle(vehicleNo) on Delete Cascade on Update Cascade
+
+);
+
+insert into ratesTable values(1,"R001","Hourly","Audi_A1_CAY_8600",5000.00,10.00,"CAR_01");
+insert into ratesTable values(2,"R002","Daily","Audi_A1_CAY_8600",19000.00,10.00,"CAR_01");
+insert into ratesTable values(3,"R003","Weekly","Audi_A1_CAY_8600",25000.00,10.00,"CAR_01");
+insert into ratesTable values(4,"R004","Monthly","Audi_A1_CAY_8600",75000.00,10.00,"CAR_01");
+
+insert into ratesTable values(5,"R001","Hourly","Honda_V_CAY_1234",5000.00,10.00,"CAR_01");
+insert into ratesTable values(6,"R002","Daily","Honda_V_CAY_1234",12000.00,10.00,"CAR_01");
+insert into ratesTable values(7,"R003","Weekly","Honda_V_CAY_1234",15000.00,10.00,"CAR_01");
+insert into ratesTable values(8,"R004","Monthly","Honda_V_CAY_1234",35000.00,10.00,"CAR_01");
+
+insert into ratesTable values(9,"R001","Hourly","Toyota_P_CAY_3467",7000.00,10.00,"CAR_01");
+insert into ratesTable values(10,"R002","Daily","Toyota_P_CAY_3467",17000.00,10.00,"CAR_01");
+insert into ratesTable values(11,"R003","Weekly","Toyota_P_CAY_3467",20000.00,10.00,"CAR_01");
+insert into ratesTable values(12,"R004","Monthly","Toyota_P_CAY_3467",65000.00,10.00,"CAR_01");
+
+insert into ratesTable values(13,"R001","Hourly","Nissan_S_CAY_9876",5000.00,10.00,"CAR_01");
+insert into ratesTable values(14,"R002","Daily","Nissan_S_CAY_9876",10000.00,10.00,"CAR_01");
+insert into ratesTable values(15,"R003","Weekly","Nissan_S_CAY_9876",15000.00,10.00,"CAR_01");
+insert into ratesTable values(16,"R004","Monthly","Nissan_S_CAY_9876",25000.00,10.00,"CAR_01");
+
+Create table IF NOT EXISTS Driver(
+	Driverid varchar(15),
+	DName varchar(45),
+	DAdress Varchar(45),
+	Dphonenum varchar(35),
+	Driver_NIC varchar(20),
+	Email VARCHAR(20),
+	licenceNo varchar(35),
+	joined_Date varchar(35),
+	CONSTRAINT PRIMARY KEY (Driverid)
+);
+
+insert into Driver values("Driver0001","Saman Kamara","No 03,Fonseka Rd,Kaluthara","0771238696","199012349090","saman12@gmail.com","B123345","2020-02-02");
+insert into Driver values("Driver0002","Nimal Silva","No 123,Main Rd,wadduwa","0776734566","199089765676","Nimal56@gmail.com","B789345","2020-02-04");
+insert into Driver values("Driver0003","Kamal Frenando","No 34,Fonseka Rd,Thalpitiya","077656796","198909897876","Kamal45@gmail.com","B783345","2020-04-02");
+insert into Driver values("Driver0004","Animal Kaludevala","No 43,Main Rd,Kaludewala","0754368696","197809342345","Animal67@gmail.com","B908345","2020-04-02");
+insert into Driver values("Driver0005","Danapala badasuriya","No 87,Galle Rd,walana","077656796","197512357667","Danapala78@gmail.com","B345345","2020-05-06");
+insert into Driver values("Driver0006","Danapala Udayakantha","No 89,Main Rd,Nalluruwa","0765768696","197412459879","Danapala79@gmail.com","B432354","2020-06-06");
+insert into Driver values("Driver0007","Amal Perera","No 23,Fonseka Rd,wakada","077404041","199076896799","Amal56@gmail.com","B453467","2020-07-07");
+insert into Driver values("Driver0008","Kumara silva","No 43,Main Rd,Alubomulla","0773336936","197412308765","Kumara23@gmail.com","B098098","2020-08-02");
+insert into Driver values("Driver0009","Dinusha Gamage","No 012,Galle Rd,Hirana","0766768696","199734562345","Dinusha67@gmail.com","B101010","2020-08-12");
+insert into Driver values("Driver0010","Nimal Bandara","No 453,Fonseka Rd,Horana","0786768696","199878786565","Nimal67@gmail.com","B223345","2020-08-22");
+insert into Driver values("Driver0011","Kamal Silva","No 23,oldGalle Rd,Panadura","0706768696","199878787665","Kamal89@gmail.com","B657589","2020-09-23");
+insert into Driver values("Driver0012","Somapala Dikwella","No 45,OldGalle Rd,wadduwa","0706760696","19872367456","Somapala12@gmail.com","B909890","2020-12-10");
+
+create table IF NOT EXISTS guarantor(
+	Gid Varchar(15),
+	Gname varchar(35),
+	email varchar(50),
+	phoneNo int,
+	address varchar(50),
+	guarantorNIC VARCHAR(30),
+	Cid VARCHAR(6) NOT NULL,
+	PRIMARY KEY (Gid),
+	CONSTRAINT FOREIGN KEY(Cid) REFERENCES   Customer(Cid) on Delete Cascade on Update Cascade
+
+	
+);
+create table IF NOT EXISTS reservation(
+		RId varchar(10),
+        	Cid VARCHAR(6) NOT NULL,
+        	vehicleNo VARCHAR(45) NOT NULL,
+		Driverid varchar(45),
+		reservation_date varchar(45),
+		reservation_time varchar(20),
+		return_day varchar(45),
+		return_time varchar(45),
+		rentalType varchar(20),
+		location VARCHAR(100),
+		rateType varchar(20),
+		KM 	decimal(10,3),
+        	totalDays int,
+		basic_amount DECIMAL(10,2),
+        	vehicleTypeCode varchar(45),
+        	
+		CONSTRAINT PRIMARY KEY (RId),
+		CONSTRAINT FOREIGN KEY( vehicleNo) REFERENCES  vehicle(vehicleNo) on Delete Cascade on Update Cascade,
+		CONSTRAINT FOREIGN KEY(Cid) REFERENCES   Customer(Cid) on Delete Cascade on Update Cascade,
+		CONSTRAINT FOREIGN KEY(Driverid) REFERENCES   Driver(Driverid) on Delete Cascade on Update Cascade         
+);
+create table IF NOT EXISTS agreement(
+		agreementId varchar(10),
+		RId varchar(10),
+        Cid VARCHAR(16) NOT NULL,
+		agreement_date varchar(20),
+        adminName VARCHAR(45),
+		CONSTRAINT PRIMARY KEY (agreementId),
+		CONSTRAINT FOREIGN KEY( RId) REFERENCES  reservation(RId) on Delete Cascade on Update Cascade,
+        CONSTRAINT FOREIGN KEY(Cid) REFERENCES   Customer(Cid) on Delete Cascade on Update Cascade
+);
+
+
+
+Create table if not exists payment(
+	invoice_No varchar(10) PRIMARY KEY,
+    	agreementId varchar(10),
+    	customerPayment DECIMAL(10,3),
+	balanceAmount decimal(10,3),
+    	Payment_date varchar(20),
+     	CONSTRAINT FOREIGN KEY(agreementId) REFERENCES   agreement(agreementId) on Delete Cascade on Update Cascade
+    
+);
+
+
+ create table if not exists vehicleStatus(
+	 vehicleNo VARCHAR(20) NOT NULL,
+	 status varchar(100)
+);
+
+CREATE TABLE Images (
+	id INT NOT NULL AUTO_INCREMENT,
+
+    nameImage VARCHAR(200) NOT NULL,
+    image LONGBLOB NOT NULL,
+    PRIMARY KEY (id),
+
+);
+
+
+insert into  Customer values("C001","Rashi Sharmila","No 3,fonseka rd,Panadura","0774748407","200162101775","rashi12@gmail.com","B123123","2022-01-01");
+insert into  Customer values("C002","Saman Kumara","No 12,Galle rd,Panadura","0754748407","199062101775","Saman12@gmail.com","B1231783","2022-02-01");
+insert into  Customer values("C003","Ishan Siriwardana","No 13,Main rd,Kaluthara","0774748407","1997062101775","Ishan12@gmail.com","B134123","2022-03-01");
+insert into  Customer values("C004","Vishmi Anjali","No 34,Main2 rd,Wadduwa","0754748407","199762101775","Vishmi12@gmail.com","B123423","2022-04-01");
+insert into  Customer values("C005","Ruvini Rangathara","No 56,fonseka2 rd,Panadura","074768409","199762101775","Ruvini56@gmail.com","B156123","2022-05-01");
+insert into  Customer values("C006","Ishanka Chanuka","No 78,Main2 rd,Wadduwa","0764668407","199762101775","Ishanka56@gmail.com","B125623","2022-06-01");
+insert into  Customer values("C007","Binara damsara","No 123,Main3 rd,Kaluthara","0766648407","199762101775","Binara34@gmail.com","B233123","2022-07-01");
+insert into  Customer values("C008","Isuru Prabath","No 675,fonseka3 rd,Panadura","0774548407","196101775121","Isuru66@gmail.com","B145123","2022-08-01");
+insert into  Customer values("C009","Chiranthana Devsara","No 56,fonseka3 rd,Kaluthara","0764558407","198062101775","Devsara1@gmail.com","B176123","2022-09-01");
+insert into  Customer values("C010","Ajith Kumara","No 45,Main2 rd,Panadura","0764755407","198962101775","Ajith45@gmail.com","B167123","2022-10-01");
+insert into  Customer values("C011","Geetha Sanjeewani","No 67,Main3 rd,Wadduwa","0778888407","197062101775","Geetha12@gmail.com","B166123","2022-11-01");
+insert into  Customer values("C012","Dinsha Frenando","No 90,fonseka5 rd,Kaluthara","0779998407","198962101975","Dinsha45@gmail.com","B123323","2022-11-01");
+insert into  Customer values("C013","Nimal Kosthuduva","No 145,fonseka rd,Kaluthara","0774548407","200162901775","Nimal67@gmail.com","B145123","2022-11-06");
+insert into  Customer values("C014","Shantha amalsiri","No 67,Main4 rd,Panadura","0774746707","198662101775","Shantha56@gmail.com","B145623","2022-11-07");
+insert into  Customer values("C015","Shashini Piyumika","No 45,Galle2 rd,Wadduwa","0774778407","198462101775","Shashini67@gmail.com","B134523","2022-11-22");
+insert into  Customer values("C016","Senuri Apsara","No 45,Galle2 rd,Panadura","0774778907","200162101975","Senuri56@gmail.com","B123423","2022-11-30");

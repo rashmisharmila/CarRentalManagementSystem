@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="invoiceAnchorPane" prefHeight="1030.0" prefWidth="1932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.MakeInvoiceController">
+   <children>
+      <ScrollPane layoutX="417.0" layoutY="14.0" prefHeight="979.0" prefWidth="1154.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1325.0" prefWidth="1130.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="222.0" prefWidth="1132.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="65.0" fitWidth="250.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/logo/logo2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="9.0" layoutY="96.0" prefHeight="21.0" prefWidth="104.0" text="Rent And Run" />
+                        <Label layoutX="9.0" layoutY="117.0" text="No 90/A Galle Road,Panadura" />
+                        <Label layoutX="9.0" layoutY="138.0" text="0382210020" />
+                        <Label layoutX="9.0" layoutY="159.0" text="rentandrun@gmail.com" />
+                        <Label layoutX="914.0" layoutY="-2.0" prefHeight="63.0" prefWidth="204.0" text="Invoice">
+                           <font>
+                              <Font name="System Bold" size="56.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="914.0" layoutY="96.0" text="Invoice No:" />
+                        <Label layoutX="1023.0" layoutY="96.0" prefHeight="21.0" prefWidth="79.0" />
+                        <Label layoutX="914.0" layoutY="117.0" text="Invoice Date :" />
+                        <Label layoutX="1025.0" layoutY="115.0" prefHeight="21.0" prefWidth="81.0" />
+                        <Label layoutX="914.0" layoutY="138.0" text="Valid Date :" />
+                        <Label layoutX="1024.0" layoutY="136.0" prefHeight="21.0" prefWidth="81.0" />
+                        <Label layoutX="914.0" layoutY="159.0" text="Prepared By :" />
+                        <Label layoutX="1022.0" layoutY="154.0" prefHeight="21.0" prefWidth="82.0" />
+                     </children>
+                  </Pane>
+                  <Group layoutX="14.0" layoutY="244.0">
+                     <children>
+                        <Label layoutX="5.0" text="Bill To" />
+                        <Label layoutX="4.0" layoutY="31.0" text="Customer Name" />
+                        <Label layoutX="1.0" layoutY="60.0" text="Customer Email" />
+                        <Label layoutY="92.0" text="Customer Phone Number" />
+                        <Label layoutX="232.0" prefHeight="21.0" prefWidth="148.0" />
+                        <Label layoutX="232.0" layoutY="31.0" prefHeight="21.0" prefWidth="148.0" />
+                        <Label layoutX="232.0" layoutY="60.0" prefHeight="21.0" prefWidth="148.0" />
+                        <Label layoutX="232.0" layoutY="92.0" prefHeight="21.0" prefWidth="148.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="56.0" layoutY="472.0">
+                     <children>
+                        <JFXTextField fx:id="txtdes" focusColor="WHITE" layoutX="-39.0" layoutY="-11.0" prefHeight="70.0" prefWidth="691.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtrate" focusColor="WHITE" layoutX="653.0" layoutY="-15.0" prefHeight="74.0" prefWidth="150.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount" focusColor="WHITE" layoutX="804.0" layoutY="-9.0" prefHeight="68.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtdes1" focusColor="WHITE" layoutX="-39.0" layoutY="66.0" prefHeight="70.0" prefWidth="691.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtrate1" focusColor="WHITE" layoutX="653.0" layoutY="62.0" prefHeight="74.0" prefWidth="150.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount1" focusColor="WHITE" layoutX="804.0" layoutY="68.0" prefHeight="68.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount11" focusColor="WHITE" layoutX="803.0" layoutY="140.0" prefHeight="83.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount111" focusColor="WHITE" layoutX="807.0" layoutY="230.0" prefHeight="68.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount1111" focusColor="WHITE" layoutX="808.0" layoutY="304.0" prefHeight="68.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtAmount1112" focusColor="WHITE" layoutX="807.0" layoutY="377.0" prefHeight="68.0" prefWidth="238.0" unFocusColor="BLACK" />
+                        <Label layoutX="675.0" layoutY="181.0" text="Sub Total">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="675.0" layoutY="264.0" text="Extra charges">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="675.0" layoutY="347.0" text="Total">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="675.0" layoutY="411.0" text="Balance Due">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="71.0" layoutY="430.0" />
+                  <Group layoutX="64.0" layoutY="602.0" />
+                  <Pane layoutX="16.0" layoutY="382.0" prefHeight="70.0" prefWidth="1085.0" style="-fx-background-color: #0b3d7a;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="23.0" text="#                                     Vehicle &amp; Description" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="744.0" layoutY="25.0" text="Rate" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="961.0" layoutY="25.0" text="Amount" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Group />
+                  <Group />
+                  <Group />
+                  <GridPane layoutX="73.0" layoutY="888.0" prefHeight="216.0" prefWidth="402.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Note" textFill="#0b3d7a">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Rate for an extra hour: 1500.00" GridPane.rowIndex="1" />
+                        <Label text="Rate for an extra km: 150.00" GridPane.rowIndex="2" />
+                        <Label text="If you have any quedstions,let us know." GridPane.rowIndex="3" />
+                        <Label text="Thank you for your business!" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Text layoutX="545.0" layoutY="1249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent And Run" />
+                  <Separator layoutX="65.0" layoutY="1208.0" prefHeight="0.0" prefWidth="1029.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <JFXButton layoutX="88.0" layoutY="939.0" onAction="#btnBackOnAction" text="Back" />
+   </children>
+</AnchorPane>

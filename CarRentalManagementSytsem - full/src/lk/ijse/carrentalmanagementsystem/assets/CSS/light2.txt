@@ -1,0 +1,73 @@
+
+.root {
+
+  /* Initial themeing */
+  -base    :  #0b3d7a;
+  -hover   : -light-gray;
+  -pressed : -base;
+
+  /* Text */
+  -highlight-text   : -light-gray;
+  -medium-text      : -text-color;
+  -dark-text        : -elegant;
+
+  /* icon and tex */
+  -background-color : BLACK;
+  -icon-color       : -dark-gray;
+  -text-color       : -dark-gray;
+
+  /* box components */
+  -box-fill         : -light-gray;  /* cor da borda */
+  -box-base         : transparent;   /* background */
+  -box-text-color   : -dark-gray;    /* cor do combo */
+
+  /* inner components*/
+  -inner-text       : BLACK;
+
+  /* track components*/
+  -track-fill       : -light-gray;
+
+  /* list components*/
+  -list-fill        : BLACK;
+
+  /* custom styles */
+  -separator-color  : -light-gray;
+  -box-search-color : -separator-color;
+  -box-search-fill  : -text-color;
+
+  -fx-background-color : -background-color;
+}
+
+
+
+.button:focused
+{
+  -fx-border-width : 4px;
+}
+
+.tab-pane:top .tab-header-area .tab-header-background
+{
+  -fx-border-width : 0px 0px 1px 0px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:top
+{
+  -fx-border-width : 0px 0px 2px 0px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top
+{
+  -fx-border-width : 2px 0px 2px 0px;
+}
+
+.to left, -base, -success);
+}
+.button,
+.tab-pane:top .tab-header-area .headers-region .tab:top
+{
+  -fx-pref-height : 40px;
+}
+
+.tab-line-aqua .headers-region .tab-selected-line {
+    -fx-background-color: -aqua;
+}

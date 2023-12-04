@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1053.0" prefWidth="1824.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.VehicleController">
+   <children>
+      <Pane fx:id="vehiclePane" layoutX="46.0" layoutY="129.0" prefHeight="92.0" prefWidth="1730.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTextField fx:id="serachVehicle" focusColor="#444eff" layoutX="1407.0" layoutY="22.0" onKeyReleased="#filterNoVehicle" prefHeight="45.0" prefWidth="260.0" promptText="Vehicle No" unFocusColor="#444eff" />
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="1681.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="47.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <Pane layoutX="44.0" layoutY="245.0" prefHeight="742.0" prefWidth="1735.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TableView fx:id="tableView" fixedCellSize="40.0" layoutX="7.0" layoutY="11.0" prefHeight="726.0" prefWidth="1722.0" style="-fx-border-color: white;" stylesheets="@../assets/CSS/table.css">
+               <columns>
+                  <TableColumn fx:id="tblVehicleId" prefWidth="180.0" text="Vehicle Id" />
+                  <TableColumn fx:id="tblVname" prefWidth="392.0" text="Vehicle Name" />
+                  <TableColumn fx:id="tblVModel" prefWidth="265.0" text="Vehicle Model" />
+                  <TableColumn fx:id="tblColour" prefWidth="233.0" text="Colour" />
+                  <TableColumn fx:id="tblFuelType" prefWidth="494.0" text="fuelType" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+      <Label fx:id="LBLDATE" contentDisplay="RIGHT" layoutX="1499.0" layoutY="1029.0" prefHeight="21.0" prefWidth="84.0" />
+      <Label fx:id="LBLTIME" contentDisplay="RIGHT" layoutX="1523.0" layoutY="1003.0" prefHeight="21.0" prefWidth="60.0" />
+   </children>
+</AnchorPane>

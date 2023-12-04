@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1053.0" prefWidth="1622.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.SreachAgreementController">
+   <children>
+      <Label layoutX="81.0" layoutY="50.0" text="Search Agreement" textFill="#0a2342">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="-8.0" layoutY="276.0" prefHeight="766.0" prefWidth="1622.0" style="-fx-background-color: white;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1232.0" prefWidth="1600.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="table" layoutX="106.0" prefHeight="1192.0" prefWidth="1429.0" style="-fx-background-color: white;" stylesheets="@../assets/CSS/StyleSheet1.css">
+                     <columns>
+                        <TableColumn fx:id="tblAgreementNo" prefWidth="114.66665649414062" text="Agreement No" />
+                        <TableColumn fx:id="tbltableno" prefWidth="137.33334350585938" text="Vehicle No" />
+                        <TableColumn fx:id="tblVehicleName" prefWidth="183.33334350585938" text="Vehicle Name" />
+                        <TableColumn fx:id="tblLicenseNumber" prefWidth="127.33331298828125" text="License Number" />
+                        <TableColumn fx:id="tblCheckIn" prefWidth="151.0" text="Check-In Date" />
+                        <TableColumn fx:id="tblCheckOut" prefWidth="146.0" text="Check-out Date" />
+                        <TableColumn fx:id="tblCustomerName" prefWidth="201.666748046875" text="Customer Name" />
+                        <TableColumn fx:id="tblPoneNumber" prefWidth="116.666748046875" text="Phone Number" />
+                        <TableColumn fx:id="tblCreatedBy" prefWidth="107.6666259765625" text="Created By " />
+                        <TableColumn fx:id="tblCreatedDate" prefWidth="115.333251953125" text="Created Date " />
+                        <TableColumn fx:id="tblStatus" prefWidth="129.0" text="Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane fx:id="serachAgreementPane" layoutX="56.0" layoutY="159.0" prefHeight="92.0" prefWidth="1533.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTextField focusColor="#0a2342" labelFloat="true" layoutX="1127.0" layoutY="37.0" onAction="#serachAgreementOnAction" prefHeight="31.0" prefWidth="364.0" promptText="Reservation No" unFocusColor="#0a2342" />
+            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="1443.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

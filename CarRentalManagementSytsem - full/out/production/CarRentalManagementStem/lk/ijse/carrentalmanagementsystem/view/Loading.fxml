@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="554.0" prefWidth="855.0" style="-fx-background-color: #fffdf7;" styleClass="foreground" stylesheets="@../assets/CSS/loder.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.LoadingController">
+   <children>
+      <ImageView fitHeight="554.0" fitWidth="1043.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/logo%20–%204.png" />
+         </image>
+      </ImageView>
+      <JFXProgressBar fx:id="progressBar1" layoutX="283.0" layoutY="453.0" prefHeight="3.0" prefWidth="412.0" styleClass="jfx-progress-bar" stylesheets="@../assets/CSS/Stylesheet.css" />
+   </children>
+</AnchorPane>

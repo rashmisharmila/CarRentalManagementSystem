@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="DriverAnchonePane" prefHeight="1053.0" prefWidth="1824.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.DriversFromController">
+   <children>
+      <Text layoutX="43.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <Pane fx:id="driverPane" layoutX="42.0" layoutY="150.0" prefHeight="92.0" prefWidth="1730.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="1522.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/lk/ijse/carrentalmanagementsystem/assets/icon/search.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="searchdriverID" labelFloat="true" layoutX="1252.0" layoutY="30.0" onAction="#searchdriverIDOnAction" onKeyReleased="#filterNoDriver" prefHeight="31.0" prefWidth="296.0" promptText="Sreach" unFocusColor="#4059a9">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXButton fx:id="btnNewDriver" buttonType="RAISED" layoutX="39.0" layoutY="17.0" onAction="#newDriverOnAction" prefHeight="50.0" prefWidth="200.0" styleClass="button-general" stylesheets="/lk/ijse/carrentalmanagementsystem/assets/CSS/Stylesheet.css" text="+New Driver" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label fx:id="LBLDATE" contentDisplay="RIGHT" layoutX="1526.0" layoutY="1029.0" prefHeight="21.0" prefWidth="84.0" />
+      <Label fx:id="LBLTIME" contentDisplay="RIGHT" layoutX="1550.0" layoutY="1003.0" prefHeight="21.0" prefWidth="60.0" />
+      <TableView fx:id="tblDrive" layoutX="45.0" layoutY="260.0" prefHeight="831.0" prefWidth="1721.0" style="-fx-background-color: white; -fx-border-radius: 5;" stylesheets="/lk/ijse/carrentalmanagementsystem/assets/CSS/Stylesheet.css">
+         <columns>
+            <TableColumn fx:id="tblDriveno" prefWidth="97.0" text="No" />
+            <TableColumn fx:id="tblDrivename" prefWidth="216.0" text="Name" />
+            <TableColumn fx:id="tblDriveAdress" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="tblDrivePhoneNumber" prefWidth="246.0" text="Phone Number" />
+            <TableColumn fx:id="tblNIC" prefWidth="194.0" text="NIC" />
+            <TableColumn fx:id="tblDriveEmail" prefWidth="237.0" text="Email" />
+            <TableColumn fx:id="tblDriveRegDate" prefWidth="269.0" text="Registered Date" />
+            <TableColumn fx:id="tblDriveLieNo" prefWidth="261.0" text="LicenceNo " />
+         </columns>
+      </TableView>
+      <JFXButton contentDisplay="CENTER" layoutX="1617.0" layoutY="173.0" onAction="#delectDriverOnaAction" prefHeight="41.0" prefWidth="41.0" text="     ">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/lk/ijse/carrentalmanagementsystem/assets/icon/Icon material-delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="1670.0" layoutY="173.0" onAction="#updateDriverOnAction" prefHeight="41.0" prefWidth="41.0" text="     ">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/lk/ijse/carrentalmanagementsystem/assets/icon/Icon material-update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

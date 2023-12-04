@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.ManageUser">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="38.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Pane layoutX="36.0" layoutY="67.0" prefHeight="581.0" prefWidth="1168.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <GridPane layoutX="24.0" layoutY="35.0" prefHeight="127.0" prefWidth="1086.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="190.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="0.0" prefWidth="13.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.0" minWidth="10.0" prefWidth="190.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="9.0" prefWidth="13.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="190.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="13.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="190.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="32.333343505859375" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="59.666656494140625" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtUserID" prefHeight="25.0" prefWidth="170.0" promptText="Customer ID" style="-fx-background-color: white; -fx-border-color: #50b1b0;" />
+                        <TextField fx:id="txtUserName" prefHeight="21.0" prefWidth="324.0" promptText="Name" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="2" />
+                        <TextField fx:id="txtUserAddress" prefHeight="21.0" prefWidth="324.0" promptText="Address" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="4" />
+                        <TextField fx:id="txtUserPhoneNumber" prefHeight="21.0" prefWidth="324.0" promptText="Phone Number" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="6" />
+                        <TextField fx:id="txtUserEmail" prefHeight="25.0" prefWidth="170.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="txtUserRole" prefHeight="25.0" prefWidth="245.0" promptText="Role" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtUsername" prefHeight="3.0" prefWidth="196.0" promptText="Username" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="txtUserPassword" promptText="Password" style="-fx-background-color: white; -fx-border-color: #50b1b0;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="1072.0" layoutY="155.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: EA906C;" text="Delete" />
+                  <Button layoutX="995.0" layoutY="155.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: EEF296;" text="Update" />
+                  <Button layoutX="915.0" layoutY="155.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #50b1b0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Save" />
+                  <TableView fx:id="tblUser" layoutX="17.0" layoutY="220.0" prefHeight="339.0" prefWidth="1133.0"  >
+                     <columns>
+                        <TableColumn fx:id="tblId" prefWidth="64.99999237060547" text="ID" />
+                        <TableColumn fx:id="tblname" prefWidth="135.0" text="Name" />
+                        <TableColumn fx:id="tblAddress" prefWidth="143.0" text="Address" />
+                        <TableColumn fx:id="tblPhonenumber" prefWidth="140.0" text="Phone Number" />
+                        <TableColumn fx:id="tblEmail" prefWidth="149.0" text="Email" />
+                        <TableColumn fx:id="tblRole" prefWidth="127.0" text="Role" />
+                        <TableColumn fx:id="tblUsername" prefWidth="175.0" text="Username" />
+                        <TableColumn fx:id="tblPassword" prefWidth="198.0" text="Password" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtSearch" layoutX="24.0" layoutY="154.0" prefHeight="27.0" prefWidth="226.0" promptText="Search....." style="-fx-background-color: white; -fx-border-color: #50b1b0;" />
+               </children>
+               <effect>
+                  <DropShadow height="5.0" offsetX="1.0" offsetY="1.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color blue="0.0117647061124444" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

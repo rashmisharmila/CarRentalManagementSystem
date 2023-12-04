@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="dashboradwithManuBarAnchorpane" prefHeight="1042.0" prefWidth="1943.0" style="-fx-border-radius: 25; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.DashboardFormController">
+   <children>
+      <AnchorPane layoutY="3.0" prefHeight="1054.0" prefWidth="1906.0" style="-fx-border-radius: 25; -fx-background-radius: 25;">
+         <children>
+            <AnchorPane fx:id="dashboradAnchorPane" layoutX="119.0" layoutY="-1.0" prefHeight="1055.0" prefWidth="1807.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="25.0" prefHeight="54.0" prefWidth="283.0" text="Dashborad">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="rootWelcome" layoutX="16.0" layoutY="144.0" prefHeight="308.0" prefWidth="1754.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="308.0" fitWidth="1386.0" layoutX="390.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/im/logo%20–%206.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="78.0" layoutY="31.0" prefHeight="70.0" prefWidth="200.0" text="Welcome ">
+                           <font>
+                              <Font name="Rockwell Bold Italic" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblusername" layoutX="272.0" layoutY="31.0" prefHeight="65.0" prefWidth="257.0" text=" ">
+                           <font>
+                              <Font name="Rockwell Bold Italic" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbldate" layoutX="169.0" layoutY="204.0" prefHeight="35.0" prefWidth="148.0" textFill="#979292" />
+                        <Label fx:id="lbltime" layoutX="169.0" layoutY="162.0" prefHeight="35.0" prefWidth="148.0" textFill="#979292" />
+                        <Label layoutX="84.0" layoutY="103.0" prefHeight="21.0" prefWidth="306.0" text="Our brands are the most valuable things and " textFill="#a4a1a1">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="84.0" layoutY="124.0" text="Customer service is our way of life" textFill="#a4a1a1">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="123.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/Icon%20ionic-ios-time.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="123.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/Icon%20material-today.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="518.0" layoutY="493.0" prefHeight="540.0" prefWidth="511.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text layoutX="232.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="179.0" layoutY="25.0" text="Quick Lookup">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Pane layoutX="33.0" layoutY="118.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow height="5.45" radius="2.225" width="5.45" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="22.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20awesome-pencil-alt.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="59.0" layoutY="57.0" prefHeight="25.0" prefWidth="129.0" styleClass="h4" stylesheets="@../assets/CSS/Stylesheet.css" text="Registed Customers">
+                                 <font>
+                                    <Font name="Corbel" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRegistedCustomer" layoutX="80.0" layoutY="9.0" prefHeight="52.0" prefWidth="100.0">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton prefHeight="124.0" prefWidth="200.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text="   " />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="36.0" layoutY="282.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow height="5.45" radius="2.225" width="5.45" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="22.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20awesome-pencil-alt.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="82.0" layoutY="57.0" prefHeight="25.0" prefWidth="94.0" styleClass="h4" stylesheets="@../assets/CSS/Stylesheet.css" text="Agreements">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAgreement" layoutX="73.0" layoutY="5.0" prefHeight="52.0" prefWidth="92.0">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="-2.0" layoutY="-1.0" prefHeight="124.0" prefWidth="200.0" text="   " />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="268.0" layoutY="279.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow height="5.45" radius="2.225" width="5.45" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="22.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20awesome-pencil-alt.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="70.0" layoutY="54.0" prefHeight="35.0" prefWidth="116.0" styleClass="h4" stylesheets="@../assets/CSS/Stylesheet.css" text="Reservation">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton prefHeight="124.0" prefWidth="200.0" text=" " />
+                              <Label fx:id="lbl_numberReservation" layoutX="82.0" layoutY="5.0" prefHeight="52.0" prefWidth="92.0" text="            ">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="text-primary" />
+                                    <String fx:value="h3" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="269.0" layoutY="115.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                           <effect>
+                              <DropShadow height="5.45" radius="2.225" width="5.45" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="22.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20awesome-pencil-alt.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblAvailbleVehicle" layoutX="82.0" layoutY="12.0" prefHeight="52.0" prefWidth="76.0">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="54.0" prefHeight="35.0" prefWidth="116.0" styleClass="h4" stylesheets="@../assets/CSS/Stylesheet.css" text="Available Vehicle">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton prefHeight="124.0" prefWidth="200.0" text=" " />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="491.0" prefHeight="548.0" prefWidth="472.0" style="-fx-background-color: white; -fx-background-radius: 5;" stylesheets="@../assets/CSS/table.css">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <TableView fx:id="tableView" fixedCellSize="40.0" layoutX="28.0" layoutY="137.0" prefHeight="358.0" prefWidth="429.0" style="-fx-border-color: white; -fx-background-color: white;" stylesheets="@../assets/CSS/table.css">
+                           <columns>
+                              <TableColumn fx:id="tblVehicleId" prefWidth="92.0" text="Vehicle No" />
+                              <TableColumn fx:id="tblRateType" prefWidth="292.0" text="Rate Type " />
+                              <TableColumn fx:id="tblrate" prefWidth="292.0" text="Rate(Rs)" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label layoutX="75.0" layoutY="20.0" text="Rate Summary ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <JFXTextField fx:id="serachVehicleNo" layoutX="28.0" layoutY="80.0" onAction="#serachVehicleNoOnAction" onKeyReleased="#filterVehicleNo" prefHeight="25.0" prefWidth="180.0" promptText="Vehicle No" stylesheets="@../assets/CSS/Stylesheet.css" />
+                        <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="216.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton layoutX="1705.0" layoutY="18.0" prefHeight="25.0" prefWidth="25.0" text="  " />
+                  <Pane layoutX="1054.0" layoutY="493.0" prefHeight="540.0" prefWidth="715.0" style="-fx-background-radius: 5;">
+                     <children>
+                        <WebView fx:id="webView" layoutX="4.0" layoutY="1.0" prefHeight="540.0" prefWidth="715.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </WebView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="-4.0" layoutY="-5.0" prefHeight="1067.0" prefWidth="124.0" style="-fx-background-color: #ababab;" AnchorPane.bottomAnchor="-8.0" AnchorPane.topAnchor="-5.0">
+               <children>
+                  <VBox layoutX="4.0" layoutY="158.0" prefHeight="456.0" prefWidth="92.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" onAction="#btnDashboradOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Dashborad" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/bdashboa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button3" />
+                              <String fx:value="h4" />
+                           </styleClass>
+                        </JFXButton>
+                        <Group>
+                           <children>
+                              <JFXButton contentDisplay="TOP" layoutY="85.0" onAction="#btnvehicleOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Vehicle" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/bvehicle.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button3" />
+                                    <String fx:value="h4" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutY="160.0" onAction="#btnCustomerOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Customer" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/bcustomer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button3" />
+                                    <String fx:value="h4" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutY="238.0" onAction="#btnReservationOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Reservation" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/breservaton.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button3" />
+                                    <String fx:value="h4" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutY="315.0" onAction="#btnAgreementOnAction" prefHeight="78.0" prefWidth="119.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Agreement" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="31.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/bAgreement.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button3" />
+                                    <String fx:value="h4" />
+                                 </styleClass>
+                              </JFXButton>
+                           </children>
+                        </Group>
+                        <JFXButton contentDisplay="TOP" layoutY="400.0" onAction="#btnPayametOnAction" prefHeight="78.0" prefWidth="124.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" stylesheets="@../assets/CSS/Stylesheet.css" text="Paytment" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/Icon%20material-payment.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button3" />
+                              <String fx:value="h4" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <JFXButton contentDisplay="TOP" layoutX="1.0" layoutY="987.0" onAction="#btnLogout" prefHeight="70.0" prefWidth="124.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="h4" stylesheets="@../assets/CSS/Stylesheet.css" text="Logout" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/Icon%20open-account-logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <HBox layoutY="-2.0" prefHeight="121.0" prefWidth="115.0">
+                     <children>
+                        <ImageView fitHeight="126.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <JFXButton contentDisplay="CENTER" layoutX="1845.0" layoutY="23.0" prefHeight="25.0" prefWidth="25.0" text=" " textFill="#0026ff">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/man.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton contentDisplay="CENTER" layoutX="1824.0" layoutY="25.0" prefHeight="25.0" prefWidth="25.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/Group%2084.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" layoutX="1795.0" layoutY="27.0" prefHeight="25.0" prefWidth="25.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/Icon%20ionic-ios-notifications.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

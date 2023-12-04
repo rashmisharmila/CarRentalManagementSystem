@@ -1,0 +1,20 @@
+
+
+.spinner,
+.tab-pane:top, .tab-pane:top .tab-header-area, .tab-pane:top .tab-header-area .headers-region .tab:selected:top,
+.tab-pane:top .tab-header-area .tab-header-background,
+.tab-pane:top .tab-content-area, .scroll-pane:fitToHeight,
+.tab-pane:top .tab-header-area .headers-region .tab:top,
+.scroll-pane .viewport, .scroll-pane, .scroll-pane:fitToWidth,
+.scroll-pane:fitToWidth:fitToHeight,
+.tree-table-row-cell:filled .table-column:filled,
+.tree-table-view .virtual-flow .clipped-container .sheet .tree-table-row-cell,
+.check-box:determinate .box, .text-area .scroll-pane .viewport .content,
+.spinner:focused,
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button,
+.text-area
+{
+  -fx-background-color : transparent;
+}
+

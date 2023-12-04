@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mapAnchorPane" prefHeight="1053.0" prefWidth="1824.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.TodayReservationController">
+   <children>
+      <Text fill="#0d0d46" layoutX="43.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today Reservation">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="42.0" layoutY="259.0" prefHeight="630.0" prefWidth="1724.0" stylesheets="@../assets/CSS/Stylesheet.css">
+         <columns>
+            <TableColumn fx:id="vehNo" prefWidth="170.99996948242188" text="Vehicle No" />
+            <TableColumn fx:id="cusNo" minWidth="0.0" prefWidth="247.0" text="Customer No" />
+            <TableColumn fx:id="customerName" minWidth="0.0" prefWidth="247.0" text="Customer Name" />
+            <TableColumn fx:id="CustomerPhoneNumber" minWidth="0.0" prefWidth="247.0" text="Customer Phone Number" />
+            <TableColumn fx:id="PickUpTime" minWidth="0.0" prefWidth="247.0" text="Pick up time" />
+            <TableColumn fx:id="Description" minWidth="0.0" prefWidth="247.0" text="Description" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="1499.0" layoutY="945.0" onAction="#btnUpdateOnAction" prefHeight="56.0" prefWidth="247.0" styleClass="button-general" stylesheets="@../assets/CSS/Stylesheet.css" text="Update" textAlignment="CENTER" textFill="WHITE">
+         <cursor>
+
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="dateLable" layoutX="1333.0" layoutY="57.0" prefHeight="21.0" prefWidth="266.0" />
+      <Pane fx:id="todayReservationPane" layoutX="42.0" layoutY="150.0" prefHeight="92.0" prefWidth="1725.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="1691.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon/search.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="serachReservationId" labelFloat="true" layoutX="1302.0" layoutY="30.0" onAction="#serachReservationIdOnAction" onKeyReleased="#filterNoReservation" prefHeight="31.0" prefWidth="387.0" promptText="Sreach" unFocusColor="#4059a9">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

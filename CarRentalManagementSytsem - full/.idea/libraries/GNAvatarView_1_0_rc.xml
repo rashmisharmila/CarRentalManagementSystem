@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="GNAvatarView-1.0-rc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/carrentalmanagementsystem/lib/GNAvatarView-1.0-rc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/carrentalmanagementsystem/lib/GNButton-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/carrentalmanagementsystem/lib/GNCalendar-1.0-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/carrentalmanagementsystem/lib/GNCarousel-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/carrentalmanagementsystem/lib/GNDecorator-2.1.2-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

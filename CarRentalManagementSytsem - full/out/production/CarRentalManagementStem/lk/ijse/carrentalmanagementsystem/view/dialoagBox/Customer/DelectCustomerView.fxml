@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="AddAdminAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.dialogBoxController.CustomerDialoagBoxController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Label layoutX="316.0" layoutY="15.0" prefHeight="42.0" prefWidth="169.0" styleClass="h2" stylesheets="@../../../assets/CSS/Stylesheet.css" text="Delect Customer" />
+      <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="633.0" onAction="#delectOnAction" prefHeight="37.0" prefWidth="128.0" styleClass="button-delete" stylesheets="@../../../assets/CSS/Stylesheet.css" text="Delect" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCanCle" buttonType="RAISED" layoutX="458.0" layoutY="633.0" onAction="#btnCancleOnAction" prefHeight="37.0" prefWidth="128.0" styleClass="button-general_1" stylesheets="@../../../assets/CSS/Stylesheet.css" text="Cancle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <GridPane layoutX="89.0" layoutY="91.0" prefHeight="470.0" prefWidth="613.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXTextField fx:id="adminid" labelFloat="true" onAction="#txtCustomerNoOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="8.0" prefWidth="613.0" promptText="No" unFocusColor="BLACK" />
+            <JFXTextField fx:id="adminname" labelFloat="true" onKeyReleased="#textFields_Key_Released" prefHeight="6.0" prefWidth="613.0" promptText="Name " unFocusColor="BLACK" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="adminAddress" labelFloat="true" onKeyReleased="#textFields_Key_Released" prefHeight="0.0" prefWidth="613.0" promptText="Address" unFocusColor="BLACK" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="adminPhoneNumber" labelFloat="true" onKeyReleased="#textFields_Key_Released" prefHeight="0.0" prefWidth="613.0" promptText="PhoneNumber" unFocusColor="BLACK" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="adminEmail" labelFloat="true" onKeyReleased="#textFields_Key_Released" prefHeight="0.0" prefWidth="613.0" promptText="Email" unFocusColor="BLACK" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="adminRegDate" labelFloat="true" onKeyReleased="#textFields_Key_Released" prefHeight="0.0" prefWidth="613.0" promptText="Registered Date" unFocusColor="BLACK" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <JFXButton layoutX="749.0" onAction="#closebtnOnAction" prefHeight="37.0" prefWidth="42.0" text="  " />
+      <ImageView fitHeight="24.0" fitWidth="17.0" layoutX="763.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/icon/Icon%20material-close.png" />
+         </image>
+         <viewport>
+            <Rectangle2D minX="1.0" minY="1.0" width="1.0" />
+         </viewport>
+      </ImageView>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

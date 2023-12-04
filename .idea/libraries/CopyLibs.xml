@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="CopyLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/AnimateFX-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/controlsfx-8.40.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/fontawesomefx-8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GMapsFX-2.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GNAvatarView-1.0-rc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GNButton-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GNCalendar-1.0-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GNCarousel-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/GNDecorator-2.1.2-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jfoenix-8.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jfoenix-8.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jxbrowser-6.23.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jxmaps-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jxmapviewer2-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/logback-classic-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/logback-core-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/mysql-connector-java-8.0.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/slf4j-api-1.7.23.jar!/" />
+      <root url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/CopyLibs" />
+      <root url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jasper-lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jasper-lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/CopyLibs" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jasper-lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/CarRentalManagementSytsem - full/src/lk/ijse/carrentalmanagementsystem/lib/jasper-lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

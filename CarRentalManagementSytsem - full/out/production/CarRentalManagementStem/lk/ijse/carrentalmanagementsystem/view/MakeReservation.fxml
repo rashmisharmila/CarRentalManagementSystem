@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="newReservatonAchorPane" prefHeight="1116.0" prefWidth="1805.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carrentalmanagementsystem.controller.MakeResservation">
+   <children>
+      <Text layoutX="57.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Reservation">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <Pane fx:id="newReservationPane" layoutX="36.0" layoutY="113.0" prefHeight="91.0" prefWidth="1722.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Text layoutX="39.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation No" wrappingWidth="172.58154296875">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblReservationNo" layoutX="230.0" layoutY="21.0" prefHeight="34.0" prefWidth="201.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="TOP" layoutX="1457.0" layoutY="14.0" onAction="#btnSaveOnAction" prefHeight="56.0" prefWidth="247.0" styleClass="button-general" stylesheets="@../assets/CSS/Stylesheet.css" text="+Make Agreement" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="-4.0" layoutY="226.0" prefHeight="890.0" prefWidth="1813.0" style="-fx-background-color: #E9E9E9;" stylesheets="@../assets/CSS/Stylesheet.css">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1175.0" prefWidth="1808.0">
+               <children>
+                  <Pane layoutX="40.0" layoutY="2.0" prefHeight="416.0" prefWidth="860.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label layoutX="213.0" layoutY="30.0" prefHeight="29.0" prefWidth="201.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="321.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental Information ">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXComboBox fx:id="cmbRentalTypes" focusColor="#0a2342" labelFloat="true" layoutX="100.0" layoutY="111.0" onAction="#cmbRentalTypesOnAction" prefHeight="31.0" prefWidth="247.0" promptText="Rental Tpye" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="#0a2342" />
+                        <JFXTextField fx:id="txtOffcialLocatiom" focusColor="#0a2342" labelFloat="true" layoutX="453.0" layoutY="111.0" prefHeight="31.0" prefWidth="247.0" promptText="Offcial Location" styleClass="jfx-text-field" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="#0a2342" />
+                        <JFXTextField fx:id="txtDate" layoutX="100.0" layoutY="197.0" prefHeight="30.0" prefWidth="247.0" promptText="Rental Date" />
+                        <JFXTextField fx:id="txtTime" layoutX="453.0" layoutY="197.0" prefHeight="30.0" prefWidth="247.0" promptText="Rental time" />
+                        <JFXTextField fx:id="txtreturndate" layoutX="98.0" layoutY="273.0" prefHeight="30.0" prefWidth="251.0" promptText="return Date" />
+                        <JFXTextField fx:id="txtreturnTime" layoutX="453.0" layoutY="279.0" prefHeight="30.0" prefWidth="251.0" promptText="Return time" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="930.0" layoutY="434.0" prefHeight="267.0" prefWidth="834.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text layoutX="421.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Information ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXComboBox fx:id="cmbDriversId" focusColor="#0a2342" labelFloat="true" layoutX="116.0" layoutY="92.0" onAction="#cmbDriversidOnAction" prefHeight="31.0" prefWidth="247.0" promptText="Driver No" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="#0a2342" />
+                        <Label layoutX="113.0" layoutY="176.0" text="Licene No" />
+                        <Label layoutX="507.0" layoutY="91.0" text="Name" />
+                        <Label layoutX="498.0" layoutY="176.0" text="Phone Number" />
+                        <Label fx:id="lblDriversNumber" layoutX="501.0" layoutY="195.0" prefHeight="31.0" prefWidth="259.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDriversName" layoutX="501.0" layoutY="115.0" prefHeight="31.0" prefWidth="259.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDriversLisNo" layoutX="115.0" layoutY="192.0" prefHeight="31.0" prefWidth="259.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="38.0" layoutY="714.0" prefHeight="197.0" prefWidth="1729.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label layoutX="213.0" layoutY="30.0" prefHeight="29.0" prefWidth="201.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="820.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charges">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="txtKms" focusColor="#0a2342" labelFloat="true" layoutX="435.0" layoutY="85.0" prefHeight="31.0" prefWidth="300.0" promptText="Kms" styleClass="jfx-text-field" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="txtTotalDays" focusColor="#0a2342" labelFloat="true" layoutX="909.0" layoutY="85.0" prefHeight="31.0" prefWidth="256.0" promptText="Total Days" styleClass="jfx-text-field" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <Label layoutX="1272.0" layoutY="85.0" text="Total Charges " />
+                        <Label fx:id="lblTotalCharges" layoutX="1374.0" layoutY="85.0" prefHeight="31.0" prefWidth="307.0" />
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btnCancle" buttonType="RAISED" contentDisplay="TOP" layoutX="1534.0" layoutY="961.0" onAction="#btnCancleOnAction" prefHeight="56.0" prefWidth="247.0" styleClass="button-general_1" stylesheets="@../assets/CSS/Stylesheet.css" text="Cancle" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="927.0" layoutY="3.0" prefHeight="415.0" prefWidth="837.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text layoutX="380.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Information ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXComboBox fx:id="cmbVehicle" focusColor="#0b3d7a" labelFloat="true" layoutX="94.0" layoutY="92.0" onAction="#cmbVehicleIdOnAction" prefHeight="31.0" prefWidth="290.0" promptText="Vehicle No" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <JFXComboBox fx:id="cmbFuelType" focusColor="#0a2342" labelFloat="true" layoutX="89.0" layoutY="324.0" prefHeight="31.0" prefWidth="300.0" promptText="Fuel Type" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <Label fx:id="lblvehicleName" layoutX="94.0" layoutY="188.0" prefHeight="31.0" prefWidth="292.0" />
+                        <Label layoutX="94.0" layoutY="169.0" text="Vehicle Name">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblVehicleLterofFeul" layoutX="94.0" layoutY="259.0" prefHeight="31.0" prefWidth="292.0" />
+                        <Label layoutX="94.0" layoutY="242.0" text="Fuel (Liter)" />
+                        <Label fx:id="lblRatees" layoutX="496.0" layoutY="261.0" prefHeight="31.0" prefWidth="292.0" />
+                        <Label layoutX="496.0" layoutY="233.0" text="Rate(LKR) :" />
+                        <Label layoutX="500.0" layoutY="164.0" text="Mileage" />
+                        <JFXComboBox fx:id="cmbRateType" focusColor="#0b3d7a" labelFloat="true" layoutX="497.0" layoutY="93.0" onAction="#cmbRateTypeOnAction" prefHeight="31.0" prefWidth="290.0" promptText="Rate Type" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <Label fx:id="lblVehicleLterofFeul1" layoutX="499.0" layoutY="191.0" prefHeight="31.0" prefWidth="292.0" />
+                        <Label fx:id="lblVehicleTypeCode" layoutX="494.0" layoutY="329.0" prefHeight="31.0" prefWidth="292.0" />
+                        <Label layoutX="494.0" layoutY="301.0" text="Vehicle Type Code" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="38.0" layoutY="436.0" prefHeight="265.0" prefWidth="860.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text layoutX="266.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Information  ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXComboBox fx:id="cmbCusno" focusColor="#0a2342" labelFloat="true" layoutX="70.0" layoutY="96.0" onAction="#cmbCusnoOnAction" prefHeight="31.0" prefWidth="247.0" promptText="Customer No" styleClass="jfx-combo-box" stylesheets="@../assets/CSS/Stylesheet.css" unFocusColor="BLACK" />
+                        <Label layoutX="429.0" layoutY="70.0" text="Name">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCustomerName" layoutX="422.0" layoutY="94.0" prefHeight="31.0" prefWidth="253.0" />
+                        <Label layoutX="427.0" layoutY="176.0" text="Phone Number">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPhoneNumber" layoutX="424.0" layoutY="205.0" prefHeight="31.0" prefWidth="252.0" />
+                        <Label layoutX="68.0" layoutY="176.0" text="NIC">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNic" layoutX="67.0" layoutY="205.0" prefHeight="31.0" prefWidth="260.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label fx:id="LBLTIME" contentDisplay="RIGHT" layoutX="1720.0" layoutY="1046.0" prefHeight="21.0" prefWidth="60.0" />
+                  <Label fx:id="LBLDATE" contentDisplay="RIGHT" layoutX="1696.0" layoutY="1078.0" prefHeight="21.0" prefWidth="84.0" />
+                  <JFXButton fx:id="btnBack" buttonType="RAISED" contentDisplay="TOP" layoutX="47.0" layoutY="962.0" onAction="#btnBackOnAction" prefHeight="56.0" prefWidth="247.0" styleClass="button-general_1" stylesheets="@../assets/CSS/Stylesheet.css" text="Back" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSave1" buttonType="RAISED" contentDisplay="TOP" layoutX="1244.0" layoutY="961.0" onAction="#btnSave1OnAction" prefHeight="56.0" prefWidth="247.0" styleClass="button-general" stylesheets="@../assets/CSS/Stylesheet.css" text="Save" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
